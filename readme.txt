@@ -67,6 +67,7 @@ web os
 	 -http://ko.wikipedia.org/wiki/Go_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)
 
 # 오픈소스, 에이피아이, open source, api
+	
  	Spring
  	 - HelloWorld.java
  	 	package com.tutorialspoint;
@@ -137,26 +138,91 @@ web os
 	 - http://www.opendaylight.org
 	 - 다른 요소 없이 직접적으로 배치할 수 있는 완전하게 기능적인 SDN 플랫폼을 제공하는 것
 	 
+	OpenIoT
+	 - http://openiot.eu
+	 - 유럽연합 집행위원회의 자금지원을 받은 연구 프로젝트로 클라우드 컴퓨팅 제공 모델을 활용하는 새로운 오픈, 대규모, 지능형 사물인터넷 애플리케이션을 새롭게 총체적으로 활성화하는 것이 목표
+	 - 인터넷-연결 대상(센서 네트워크)들의 모빌리티 측면에 초점을 맞춰 에너지 효율적인 센서 데이터 수집과 그 데이터의 클라우드로의 전송을 추구
+	 
+	Serverspec
+	 - http://serverspec.org 
+	 - 다른 모든 구성 관리 툴과 독립적으로 서버 구성을 테스트하는 단순한 접근방식을 제공
+	 
+	Tox
+	 - http://tox.im
+	 - AIM, 스카이프(Skype)등을 대체하기 위한 보안 IM과 영상채팅 애플리케이션
+	 
+	Xprivacy
+	 - https://github.com/M66B/XPrivacy 
+	 - 애플리케이션을 통한 데이터 유출을 막기 위해 만들어졌다
+
 # 지식, information
+
+	go
+	 - 특징
+	 	1. 개발속도(하드웨어 개발 vs 소프트웨어 개발)
+		2. 모듈화를 위한 의존성
+		3. 동적타입 언어의 속성을 가진 언어
+		4. 가비지 콜렉션(Garbage Collection)
+		5. 병렬처리(Parallelism)
+		
+	 - 추가자료	
+	 	0. http://www.imaso.co.kr/?doc=bbs/gnuboard.php&bo_table=article&wr_id=38206
+		1. http://golang.org Go 프로그래밍 언어 웹사이트
+		2. http://en.wikipedia.org/wiki/Ken_Thompson  켄 톰슨
+		3. http://en.wikipedia.org/wiki/Rob_Pike 롭 파이크
+		4. http://www.tiobe.com TIOBE
+		5. http://golang.kr Go프로그래밍언어 문서 한글화 작업 페이지
+		6. http://en.wikipedia.org/wiki/Go_(programming_language) Wikipedia Go언어
+		7. http://en.wikipedia.org/wiki/50_Greatest_Players_in_NBA_History NBA 역사상 Top 10 Teams
+		8. http://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs Plan 9 운영체제
+		9. http://xkcd.com/ 웹코믹스. ‘컴파일(Compiling)‘ 만화 이외에도 개발자들이 공감할만한 만화가 많다.
+		10. http://news.cnet.com/8301-30685_3-10393210-264.html CNET Go 출시 기사
+		11.  http://downloadsquad.switched.com/2009/11/11/go-go-google-gopher-go-google-invents-its-own-programming-la/ SWITCHED Go 출시 기사
+		12. http://en.wikipedia.org/wiki/Newsqueak Newsqueak 프로그래밍 언어
+
+	hoodop
+	
  
+ 	PaaS(Platform as a Service)
+ 	 - 개발자들이 호스팅할 기반 하드웨어 걱정 없이 클라우드 안에서 실행되는 애플리케이션을 구축
+ 	 
+ 	IaaS(infrastructure as a service)
+ 	 - 가상 컴퓨트, 스토리지, 데이터베이스, 온디맨드 인프라 하드웨어 서비스를 제공
+ 	 
+ 	SaaS(software as a service)
+ 	 - 클라우드 기반 애플리케이션을 서비스
+
  	AOP(관점 지향 프로그래밍)
- 	 - 관점 지향 프로그래밍은 프로그램을 명확한 부분으로 나누는 것을 수반한다. 모든 프로그래밍 패러다임은 이들 관심사들을 구현, 추상화, 구성하는 추상적 개념을 제공하는 분리되고, 독립적인 통로들을 통해 Grouping의 같은 레벨과 관심사들의 캡슐화(Encapsulation)를 지원한다. 그러나 어떤 관심사들은 구현의 이런 형태를 거역하고, 이들이 프로그램 내에서 다중 추상적 개념들에 영향을 끼치기 때문에 횡단관심사(cross-cutting concerns)라고 불린다.
+ 	 - 관점 지향 프로그래밍은 프로그램을 명확한 부분으로 나누는 것을 수반한다. 
+ 	 모든 프로그래밍 패러다임은 이들 관심사들을 구현, 추상화, 구성하는 추상적 개념을 제공하는 분리되고, 독립적인 통로들을 통해 Grouping의 같은 레벨과 관심사들의 캡슐화(Encapsulation)를 지원한다. 
+ 	 그러나 어떤 관심사들은 구현의 이런 형태를 거역하고, 이들이 프로그램 내에서 다중 추상적 개념들에 영향을 끼치기 때문에 횡단관심사(cross-cutting concerns)라고 불린다.
+ 	
  	AspectJ
  	 - 
+ 	
  	SDN(Software Defined Networking)   
  	 - 수년 동안 컴퓨터 과학자들은 네트워크의 속도와 안정성, 에너지 효율, 보안 등을 획기적으로 개선시킬 수 있는 방법을 찾고 있으나 
- 	 그 방법을 설계하거나 고안하더라도, 실제로 대규모(large-scale)로 실험하거나 검증하는 것은 불가능했다. 인터넷의 코어(core)를 구성하는 라우터나 스위치들이 이른바 완전히 닫혀 있어서 그 위에서 새로운 소프트웨어나 프로그램을 실험하는 것이 원천적으로 봉쇄되었기 때문이다.
+ 	 그 방법을 설계하거나 고안하더라도, 실제로 대규모(large-scale)로 실험하거나 검증하는 것은 불가능했다. 
+ 	 인터넷의 코어(core)를 구성하는 라우터나 스위치들이 이른바 완전히 닫혀 있어서 그 위에서 새로운 소프트웨어나 프로그램을 실험하는 것이 원천적으로 봉쇄되었기 때문이다.
+ 	
+ 	 그런 정의에 의해 나온 SDN은 소프트웨어 정의 네트워킹이라고 한다.
+ 	 SDN이라면 기본적으로 네트워크 제어 기능이 기존의 스위치나 라우터 등의 하드웨어와 별도로 분리되어야 하고, 
+ 	 데이터 전달 기능과도 역시 분리되어 개발 및 실행될 수 있는 네트워크 구조를 가져야 한다.
  	 
- 	 
- 	 
- 	 
- 	NDF(Network Function Virtualization)
+ 	 SDN은 소프트웨어 정의 포워딩(Software Defined Forwarding)을 해야 한다. 이것은 스위치와 같은 하드웨어가 수행하는 데이터 포워딩 기능이 반드시 개방형 인터페이스와 소프트웨어를 통해서 제어되어야만 한다는 것을 의미한다
+ 	 SDN이 추상화된 글로벌 관리 혹은 글로벌 관리 추상화(Global Management Abstraction)를 목표로 한다는 것이다. SDN은 기본적인 글로벌 관리 추상화를 지원함으로서 보다 선도적인 네트워크 관리 툴이 개발될 수 있도록 해야 한다. 
+ 	  예를 들면 이런 추상화 도구들은 네트워크의 글로벌 뷰, 네트워크 이벤트(토폴로지 변화나 새로운 플로우 생성 등)에 따른 반응, 그리고 네트워크 요소를 제어할 수 있는 기능 등을 포함할 수 있다(네트워크 요소 제어는 해당 엔트리를 하드웨어의 포워딩 테이블에 넣는 방법을 사용한다).
+	 "오늘날 보안, 라우팅, 에너지 효율 관리 등은 단지 기계덩어리인 네트워크 장비에 의해 좌지우지됩니다. 그건 정말 바꾸기 힘들지요. 이것이 바로 인터넷 인프라가 40년 동안이나 변하지 않은 이유입니다."
+	  	 
+ 	NFV(Network Function Virtualization)
  	 - 
+ 	 
  	Java Annotations
 	 - 자바 SE5가 제공하는 핵심적인 변화 중 하나이며 자바 언어로 표현할 수 없지만 프로그램에서 전체적으로 표현해야 할 데이터를 기술하는 방법
 	 - @Override : 기반 클래스의 메소드를 오버라이드한 것을 표시한다. 메소드 이름을 잘못 표기하거나 시그니처를 잘못 지정할 경우 컴파일 에러가 발생한다.
 	 - @Deprecated : 해당 요소가 사용될 경우 컴파일러가 경고를 발생시킨다.
 	 - @SuppressWarning : 부적절한 컴파일러의 경고를 제거하기 위해 사용한다.
+	 
 	 - // :annotations/Testable.java
 		package annotations;
 		import net.mindview.atunit.*;
@@ -164,8 +230,9 @@ web os
 			public void execute(){
 				System.out.println("Executing..");
 			}
-		@Test void testExecute(){ execute(); }
+			@Test void testExecute(){ execute(); }
 		}
+		
 	 - //: net/mindview/atunit/Test.java
 		package net.mindview.atunit;
 		import java.lang.annotation.*;
