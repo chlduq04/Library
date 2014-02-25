@@ -8,9 +8,11 @@ function divideCookie(){
 	var ca = document.cookie.split(';');
 	var cookie_dic = {};
 	for( var i = 0 ; i < ca.length ; i++ ){
-		var key = ca[i].split("=")[0];
-		var value = getCookie(key).split(",");
-		cookie_dic[key] = value;
+		var key = ca[i].split("=")[0].trim();
+		if(getCookie(key).length > 0){
+			var value = getCookie(key).split(",");
+			cookie_dic[key] = value;
+		}
 	}
 	return cookie_dic;
 }
@@ -19,9 +21,8 @@ function findIndexOfCookie(cname, id){
 	var cookies = divideCookie();
 	if(cookies.length = 0){
 		return -2;
-	}
-	if(cookies[cname] == undefined){
-		return 0;
+	}else if(cookies[cname] == undefined){
+		return -3;
 	}else{
 		var index = cookies[cname].indexOf(id);
 		if(index < 0){
@@ -49,9 +50,10 @@ function updateCookieDic(cname,id){
 	return cookies;
 }
 
+
 function updateDividedCookie(cname, newcookie){
 	var value = findIndexOfCookie(cname, newcookie);
-	if(value == -2){
+	if(value == -2 || value == -3){
 		setCookie( cname, newcookie, 1 );
 	}else{
 		var dic = updateCookieDic( cname, newcookie );
@@ -106,7 +108,7 @@ function delCookie( notdelarr ){
 		if (c.indexOf(name)==0){
 			var key = c.split("=")[0];
 			if(notdelarr != undefined && notdelarr.indexOf(key) >=0 ){
-				
+
 			}else{
 				setCookie(key,0,-1);
 			}
@@ -128,5 +130,11 @@ function checkCookie(){
 		{
 			setCookie("username",user,365);
 		}
+	}
+}
+
+if(typeof String.prototype.trim !== 'function') {
+	String.prototype.trim = function() {
+		return this.replace(/^\s+|\s+$/g, ''); 
 	}
 }
