@@ -19,3 +19,36 @@ function AES_Decode(base64_text){
 String.prototype.replaceAt=function(index, character) {
 	return this.substr(0, index) + character + this.substr(index+character.length);
 }
+
+/**-------------------- mouse wheel control stop and start --------------------**/
+
+function preventDefault(e) {
+	e = e || window.event;
+	if (e.preventDefault) {
+		e.preventDefault();
+	}
+	e.returnValue = false;
+}
+
+function wheel(e) {
+	preventDefault(e);
+}
+
+function disable_scroll() {
+  if (window.addEventListener) {
+      window.addEventListener('DOMMouseScroll', wheel, false);
+  }
+  window.onmousewheel = document.onmousewheel = wheel;
+}
+function enable_scroll() {
+    if (window.removeEventListener) {
+        window.removeEventListener('DOMMouseScroll', wheel, false);
+    }
+    window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
+}
+
+/**-------------------- mouse wheel control (slide) --------------------**/
+
+function deltaControl(event, delta){
+	
+}

@@ -44,3 +44,7 @@ function easy_get_ajax_call( url, ifsuccess, iferror ){
 		}
 	});		
 }
+
+function checkDivError(data){
+	console.log(data);
+}
