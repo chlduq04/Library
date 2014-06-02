@@ -18,7 +18,7 @@ web os
 	 - 
 	
 	jqueryjs
-	 - 
+	 - <-> prototype.js
 	
 	prototypejs
 	 - jqueryjs와 비슷한 라이브러리
@@ -37,8 +37,8 @@ web os
 	
 	d3js
 	 - SVG 기반 (cross browser 문제)
-	 -
-	 -
+	 - api라 쓰는 방식대로 다 다르다.
+	 - 예제는 visual_ars의 manager페이지 참조
 	
 	paperjs
 	 - canvas 기반 (html5)
@@ -51,7 +51,7 @@ web os
 	 - 
 	
 	webgl
-	 - 
+	 - Three.js 
 	 - 
 	
 	nodejs
@@ -59,7 +59,7 @@ web os
 	 - 
 	
 	django restful framework
-	 -
+	 - 
 	 -
  
 # 언어, language, lang
