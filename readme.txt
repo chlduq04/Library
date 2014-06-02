@@ -254,4 +254,132 @@ web os
 			public int id(); : 인터페이스의 id
 			public String description() default "no description"; default값을 지정한 string 변수
 		}
+		
+		
+자주 사용하는 javascipt 정규표현식
+var regexEnum = {
+
+ 
+
+intege:/^-?[1-9]*$/, //Integer
+
+ 
+
+intege1:/^[1-9]*$/, //A positive integer
+
+ 
+
+intege2:/^-[1-9]*$/, //Negtive integer
+
+ 
+
+num:/^([+-]?)\d*\.?\d+$/, //Digital
+
+ 
+
+num1:/^([1-9]*|0)$/, //Positive (positive integer + 0)
+
+ 
+
+num2:/^-[1-9]*|0$/, //Negative (negative integer + 0)
+
+ 
+
+decmal:/^([+-]?)\d*\.\d+$/, //Floating point number
+
+ 
+
+decmal1:/^[1-9]*.\d*|0.\d*[1-9]\d*$/,　　 //Positive floating-point number
+
+ 
+
+decmal2:/^-([1-9]*.\d*|0.\d*[1-9]*)$/,　 //Negative float
+
+ 
+
+decmal3:/^-?([1-9]*.\d*|0.\d*[1-9]*|0?.0+|0)$/,　 //Floating point number
+
+ 
+
+decmal4:/^[1-9]*.\d*|0.\d*[1-9]*|0?.0+|0$/,　　 //Non negative float (positive floating-point number + 0)
+
+ 
+
+decmal5:/^(-([1-9]*.\d*|0.\d*[1-9]*))|0?.0+|0$/,　　//Non positive float (negative float + 0)
+
+ 
+
+email:/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/, //Mail
+
+ 
+
+color:/^[a-fA-F0-9]{6}$/, //Color
+
+ 
+
+url:/^http[s]?:\/\/([\w-]+\.)+[\w-]+([\w-./?%&=]*)?$/, //url
+
+ 
+
+chinese:/^[\u4E00-\u9FA5\uF900-\uFA2D]+$/, //Chinese only
+
+ 
+
+ascii:/^[\x00-\xFF]+$/, //Only ACSII characters
+
+ 
+
+zipcode:/^\d{6}$/, //Zip code
+
+ 
+
+mobile:/^(13|15|18)[0-9]{9}$/, //Mobile phone
+
+ 
+
+notempty:/^\S+$/, //Non empty
+
+ 
+
+picture:/(.*)\.(jpg|bmp|gif|ico|pcx|jpeg|tif|png|raw|tga)$/, //The picture
+
+ 
+
+rar:/(.*)\.(rar|zip|7zip|tgz)$/, //The compressed file
+
+ 
+
+date:/^\d{4}(\-|\/|\.)\d{1,2}\1\d{1,2}$/, //Date
+
+ 
+
+qq:/^[1-9]*[1-9][0-9]*$/, //QQ number
+
+ 
+
+tel:/^(([0+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/, //Function of telephone number (including the area code verification, Intl., extension)
+
+ 
+
+username:/^\w+$/, //For user registration. Matching by the numbers, strings of 26 English letters or underline.
+
+ 
+
+letter:/^[A-Za-z]+$/, //Letter
+
+ 
+
+letter_u:/^[A-Z]+$/, //Capital
+
+ 
+
+letter_l:/^[a-z]+$/, //Lowercase letters
+
+ 
+
+idcard:/^[1-9]([0-9]{14}|[0-9]{17})$/ //ID
+
+ 
+
+}
 
