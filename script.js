@@ -52,3 +52,9 @@ function enable_scroll() {
 function deltaControl(event, delta){
 	
 }
+
+function arrayToMap(){
+    a = [];
+    //a[0] = 0.4;
+    return a.map(function(d, i) { return {x: i+1, y: Math.max(0, d)}; });
+}
