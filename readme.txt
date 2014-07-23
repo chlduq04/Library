@@ -220,6 +220,14 @@ web os
  	NFV(Network Function Virtualization)
  	 - 
  	 
+ 	Html5 application cache
+ 	 - manifest.json을 바꿈으로써 대용량의 파일을 사용자의 cache로 만들 수 있다.
+ 	
+ 	Web worker
+ 	 - thread를 흉내내는 js
+ 	 
+ 	Open XML
+ 	 
  	Java Annotations
 	 - 자바 SE5가 제공하는 핵심적인 변화 중 하나이며 자바 언어로 표현할 수 없지만 프로그램에서 전체적으로 표현해야 할 데이터를 기술하는 방법
 	 - @Override : 기반 클래스의 메소드를 오버라이드한 것을 표시한다. 메소드 이름을 잘못 표기하거나 시그니처를 잘못 지정할 경우 컴파일 에러가 발생한다.
@@ -254,6 +262,7 @@ web os
 			public int id(); : 인터페이스의 id
 			public String description() default "no description"; default값을 지정한 string 변수
 		}
+		
 		
 		
 자주 사용하는 javascipt 정규표현식
