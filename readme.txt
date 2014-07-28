@@ -55,7 +55,7 @@ web os
 	 - 
 	
 	nodejs
-	 - 
+	 - cluster를 이용한 멀티코어(multi-core) 사용
 	 - 
 	
 	django restful framework
@@ -227,7 +227,11 @@ web os
  	 - thread를 흉내내는 js
  	 
  	Open XML
- 	 
+ 	 -
+ 	
+ 	코루틴
+ 	 - 부모 자식이 아니라 동등한 관계에 있는 루틴
+ 	
  	Java Annotations
 	 - 자바 SE5가 제공하는 핵심적인 변화 중 하나이며 자바 언어로 표현할 수 없지만 프로그램에서 전체적으로 표현해야 할 데이터를 기술하는 방법
 	 - @Override : 기반 클래스의 메소드를 오버라이드한 것을 표시한다. 메소드 이름을 잘못 표기하거나 시그니처를 잘못 지정할 경우 컴파일 에러가 발생한다.
