@@ -4,20 +4,28 @@ web os
 # 예제, ex
 (이미지 프로세싱, js) http://9elements.com/io/projects/html5/canvas/
 
-# 자바스크립트, javascript, js
+# 자바스크립트, javascript, js, css
+
+	css3
+	- 애니메이션 효과 강화
+	- 틀이 정해져있긴 하지만 의외로 작동시키기가 어렵다.
+	- 그래픽카드 가속을 활용할 수 있다.
+	
 	Extjs
 	 - web os : http://dev.sencha.com/deploy/ext4.0.0/examples/desktop/desktop.html
 	 - 
 	 
 	angularjs
-	 - 
-	 - 
+	 - js로 모든 웹 mvc를 다 계발한다
+	 - 코드의 재사용을 줄일 수 있다.
 	 
 	backbonejs
-	 - 
-	 - 
-	
+	 - js를 mvc모델로 사용할 수 있다.
+	 - 다양한 기본 애니메이션 효과가 기본 내장되어있음
+	 - 하지만 framework이기 때문에 이것을 사용하기위해 틀에 맞춰서 개발을 해야하는데 그것이 매우 귀찮다.
+	 
 	jqueryjs
+	 - 1.버전과 2.버전이 잘 연동이 안된다.
 	 - <-> prototype.js
 	
 	prototypejs
@@ -27,7 +35,8 @@ web os
 	
 	raphaeljs
 	 - SVG와 VML기반 (cross browser가능한 그래픽 라이브러리)
-	 - 
+	 - explorer 6버전부터 지원했던 유명한 라이브러리
+	 - 그룹화 이동이 불편하기때문에 서로 child로 묶어 이동후 풀어주는 개인 코드가 필요하다.
 	
 	dxchartjs
 	 - http://chartjs.devexpress.com
@@ -47,8 +56,8 @@ web os
 	
 	processingjs
 	 - canvas 기반(html5)
-	 - 
-	 - 
+	 - tree기반 이미지를 나타내는것에 특화되어있다.
+	 - 기본적으로 많이 수작업이 필요하다.
 	
 	webgl
 	 - Three.js 
@@ -59,7 +68,7 @@ web os
 	 - 
 	
 	django restful framework
-	 - 
+	 - url만 넘기면 자동으로 db에서 값을 불러와준다.
 	 -
  
 # 언어, language, lang
@@ -169,22 +178,26 @@ web os
 		5. 병렬처리(Parallelism)
 		
 	 - 추가자료	
-	 	0. http://www.imaso.co.kr/?doc=bbs/gnuboard.php&bo_table=article&wr_id=38206
-		1. http://golang.org Go 프로그래밍 언어 웹사이트
-		2. http://en.wikipedia.org/wiki/Ken_Thompson  켄 톰슨
-		3. http://en.wikipedia.org/wiki/Rob_Pike 롭 파이크
-		4. http://www.tiobe.com TIOBE
-		5. http://golang.kr Go프로그래밍언어 문서 한글화 작업 페이지
-		6. http://en.wikipedia.org/wiki/Go_(programming_language) Wikipedia Go언어
-		7. http://en.wikipedia.org/wiki/50_Greatest_Players_in_NBA_History NBA 역사상 Top 10 Teams
-		8. http://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs Plan 9 운영체제
-		9. http://xkcd.com/ 웹코믹스. ‘컴파일(Compiling)‘ 만화 이외에도 개발자들이 공감할만한 만화가 많다.
+	 	0.  http://www.imaso.co.kr/?doc=bbs/gnuboard.php&bo_table=article&wr_id=38206
+		1.  http://golang.org Go 프로그래밍 언어 웹사이트
+		2.  http://en.wikipedia.org/wiki/Ken_Thompson  켄 톰슨
+		3.  http://en.wikipedia.org/wiki/Rob_Pike 롭 파이크
+		4.  http://www.tiobe.com TIOBE
+		5.  http://golang.kr Go프로그래밍언어 문서 한글화 작업 페이지
+		6.  http://en.wikipedia.org/wiki/Go_(programming_language) Wikipedia Go언어
+		7.  http://en.wikipedia.org/wiki/50_Greatest_Players_in_NBA_History NBA 역사상 Top 10 Teams
+		8.  http://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs Plan 9 운영체제
+		9.  http://xkcd.com/ 웹코믹스. ‘컴파일(Compiling)‘ 만화 이외에도 개발자들이 공감할만한 만화가 많다.
 		10. http://news.cnet.com/8301-30685_3-10393210-264.html CNET Go 출시 기사
-		11.  http://downloadsquad.switched.com/2009/11/11/go-go-google-gopher-go-google-invents-its-own-programming-la/ SWITCHED Go 출시 기사
+		11. http://downloadsquad.switched.com/2009/11/11/go-go-google-gopher-go-google-invents-its-own-programming-la/ SWITCHED Go 출시 기사
 		12. http://en.wikipedia.org/wiki/Newsqueak Newsqueak 프로그래밍 언어
 
 	hoodop
+	 - 
 	
+	tizen
+	 - 
+	 - 
  
  	PaaS(Platform as a Service)
  	 - 개발자들이 호스팅할 기반 하드웨어 걱정 없이 클라우드 안에서 실행되는 애플리케이션을 구축
@@ -275,129 +288,36 @@ web os
 		
 자주 사용하는 javascipt 정규표현식
 var regexEnum = {
-
- 
-
 intege:/^-?[1-9]*$/, //Integer
-
- 
-
 intege1:/^[1-9]*$/, //A positive integer
-
- 
-
 intege2:/^-[1-9]*$/, //Negtive integer
-
- 
-
 num:/^([+-]?)\d*\.?\d+$/, //Digital
-
- 
-
 num1:/^([1-9]*|0)$/, //Positive (positive integer + 0)
-
- 
-
 num2:/^-[1-9]*|0$/, //Negative (negative integer + 0)
-
- 
-
 decmal:/^([+-]?)\d*\.\d+$/, //Floating point number
-
- 
-
 decmal1:/^[1-9]*.\d*|0.\d*[1-9]\d*$/,　　 //Positive floating-point number
-
- 
-
 decmal2:/^-([1-9]*.\d*|0.\d*[1-9]*)$/,　 //Negative float
-
- 
-
 decmal3:/^-?([1-9]*.\d*|0.\d*[1-9]*|0?.0+|0)$/,　 //Floating point number
-
- 
-
 decmal4:/^[1-9]*.\d*|0.\d*[1-9]*|0?.0+|0$/,　　 //Non negative float (positive floating-point number + 0)
-
- 
-
 decmal5:/^(-([1-9]*.\d*|0.\d*[1-9]*))|0?.0+|0$/,　　//Non positive float (negative float + 0)
-
- 
-
 email:/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/, //Mail
-
- 
-
 color:/^[a-fA-F0-9]{6}$/, //Color
-
- 
-
 url:/^http[s]?:\/\/([\w-]+\.)+[\w-]+([\w-./?%&=]*)?$/, //url
-
- 
-
 chinese:/^[\u4E00-\u9FA5\uF900-\uFA2D]+$/, //Chinese only
-
- 
-
 ascii:/^[\x00-\xFF]+$/, //Only ACSII characters
-
- 
-
 zipcode:/^\d{6}$/, //Zip code
-
- 
-
 mobile:/^(13|15|18)[0-9]{9}$/, //Mobile phone
-
- 
-
 notempty:/^\S+$/, //Non empty
-
- 
-
 picture:/(.*)\.(jpg|bmp|gif|ico|pcx|jpeg|tif|png|raw|tga)$/, //The picture
-
- 
-
 rar:/(.*)\.(rar|zip|7zip|tgz)$/, //The compressed file
-
- 
-
 date:/^\d{4}(\-|\/|\.)\d{1,2}\1\d{1,2}$/, //Date
-
- 
-
 qq:/^[1-9]*[1-9][0-9]*$/, //QQ number
-
- 
-
 tel:/^(([0+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/, //Function of telephone number (including the area code verification, Intl., extension)
-
- 
-
 username:/^\w+$/, //For user registration. Matching by the numbers, strings of 26 English letters or underline.
-
- 
-
 letter:/^[A-Za-z]+$/, //Letter
-
- 
-
 letter_u:/^[A-Z]+$/, //Capital
-
- 
-
 letter_l:/^[a-z]+$/, //Lowercase letters
-
- 
-
 idcard:/^[1-9]([0-9]{14}|[0-9]{17})$/ //ID
-
- 
-
 }
 
 꼬꼬마 분석기 jar을 import하고 이클립스로 실행해보면
