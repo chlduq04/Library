@@ -168,6 +168,8 @@ web os
 	
 	서버 가상화
 	
+	C
+	 - NDK : external/0을 접근할 경우 0 대신에 legacy를 적으면 될 경우가 있다
 	
 	go
 	 - 특징
