@@ -63,7 +63,7 @@ function arrayToMap(){
 
 Object.extend = function(destination, source) {
     for (var property in source) {
-        if (source.hasOwnProperty(property)) {
+        if (source[property] != undefined && source[property] != null && source.hasOwnProperty(property)) {
             destination[property] = source[property];
         }
     }
