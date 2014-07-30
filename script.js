@@ -58,3 +58,14 @@ function arrayToMap(){
     //a[0] = 0.4;
     return a.map(function(d, i) { return {x: i+1, y: Math.max(0, d)}; });
 }
+
+/**-------------------- dictionary extends (slide) --------------------**/
+
+Object.extend = function(destination, source) {
+    for (var property in source) {
+        if (source.hasOwnProperty(property)) {
+            destination[property] = source[property];
+        }
+    }
+    return destination;
+};
