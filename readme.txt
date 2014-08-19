@@ -75,7 +75,16 @@ web os
 	go
 	 -http://ko.wikipedia.org/wiki/Go_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)
 
-# 오픈소스, 에이피아이, open source, api
+# 지식, information
+	
+	c++ template 전문화
+	 - 함수 템플릿의 전문화(Specialization)라는 특별한 상황에 맞는 함수를 만들면 함수 오버로드와 같이 
+	   컴파일러가 상황에 맞는 함수를 선택하도록 한다
+	
+	non-type function template
+	 - template <typename T, int VAL>처럼 typename외의 파라미터를 전달
+	 
+	
 	
  	Spring
  	 - HelloWorld.java
@@ -163,8 +172,6 @@ web os
 	Xprivacy
 	 - https://github.com/M66B/XPrivacy 
 	 - 애플리케이션을 통한 데이터 유출을 막기 위해 만들어졌다
-
-# 지식, information
 	
 	서버 가상화
 	
