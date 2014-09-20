@@ -132,3 +132,21 @@ function jquery_extends(){
 		})
 	};
 }
+
+
+/**-------------------- long click --------------------**/
+
+function clk_L(){
+	var pressTimer;
+	$(".investigation-title-img").mouseup(function(){
+		  clearTimeout(pressTimer)
+		  // Clear timeout
+		  return false;
+		}).mousedown(function(){
+		  // Set timeout
+		  pressTimer = window.setTimeout(function() {
+			  
+		  },500)
+		  return false; 
+	});	
+}
