@@ -47,7 +47,7 @@ function enable_scroll() {
     window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
 }
 
-/**-------------------- mouse wheel control (slide) --------------------**/
+/**------------------------ mouse wheel control (slide) -----------------------**/
 
 function deltaControl(event, delta){
 	
@@ -59,7 +59,7 @@ function arrayToMap(){
     return a.map(function(d, i) { return {x: i+1, y: Math.max(0, d)}; });
 }
 
-/**-------------------- dictionary extends --------------------**/
+/**---------------------------- dictionary extends ----------------------------**/
 
 Object.extend = function(destination, source) {
     for (var property in source) {
@@ -70,11 +70,12 @@ Object.extend = function(destination, source) {
     return destination;
 };
 
-/**-------------------- jquery extends toggle func --------------------**/
+/**------------------------ jquery extends toggle func ------------------------**/
 
 function jquery_extends(){
 	if(jQuery){
 		$.fn.extend({
+			/**----------- bind click toggle two func -------------**/
 			bind_clk_toggle : function(on_func, off_func){
 				var self = this;
 				this.swt = false;
@@ -87,6 +88,7 @@ function jquery_extends(){
 					}
 				})
 			},
+			/**----------- bind click toggle many funcs -----------**/
 			bind_clk_toggles : function(){
 				var self = this;
 				this.swt = false;
@@ -102,6 +104,7 @@ function jquery_extends(){
 					})
 				})(self, arguments)
 			},
+			/**------------- on click toggle two func -------------**/
 			on_clk_toggle : function(on_func, off_func){
 				var self = this;
 				this.swt = false;
@@ -114,6 +117,7 @@ function jquery_extends(){
 					}
 				})
 			},
+			/**------------- on click toggle many funcs -----------**/
 			on_clk_toggles : function(){
 				var self = this;
 				this.swt = false;
@@ -133,20 +137,21 @@ function jquery_extends(){
 	};
 }
 
+/**------------------------ jquery extends long click -------------------------**/
 
-/**-------------------- long click --------------------**/
-
-function clk_L(){
-	var pressTimer;
-	$(".investigation-title-img").mouseup(function(){
-		  clearTimeout(pressTimer)
-		  // Clear timeout
-		  return false;
-		}).mousedown(function(){
-		  // Set timeout
-		  pressTimer = window.setTimeout(function() {
-			  
-		  },500)
-		  return false; 
-	});	
+function clickMouseLong(){
+	if(jQuery){
+		$.fn.extend({
+			bind_clk_long : function(func, timeout){
+				var pressTimer;
+				$(this).mouseup(function(){
+					  clearTimeout(pressTimer)
+					  return false;
+					}).mousedown(function(){
+					  pressTimer = window.setTimeout(func, timeout);
+					  return false; 
+				});	
+			}
+		})
+	}
 }
