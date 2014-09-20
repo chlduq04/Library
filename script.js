@@ -59,7 +59,7 @@ function arrayToMap(){
     return a.map(function(d, i) { return {x: i+1, y: Math.max(0, d)}; });
 }
 
-/**-------------------- dictionary extends (slide) --------------------**/
+/**-------------------- dictionary extends --------------------**/
 
 Object.extend = function(destination, source) {
     for (var property in source) {
@@ -70,7 +70,7 @@ Object.extend = function(destination, source) {
     return destination;
 };
 
-/**----------------**/
+/**-------------------- jquery extends toggle func --------------------**/
 
 function jquery_extends(){
 	if(jQuery){
