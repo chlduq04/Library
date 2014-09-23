@@ -70,13 +70,6 @@ web os
  	 - 부모 자식이 아니라 동등한 관계에 있는 루틴
 		
 
-꼬꼬마 분석기 jar을 import하고 이클립스로 실행해보면
-heap error가 납니다.
-
-그래서 이클립스
-Properties - Run/Debug Settings - Arguments tab - VM arguments 로
-이동하여 -Xms256m -Xmx1024m 세팅을 해줘야 합니다.
-
 http://kwaknu.egloos.com/5213665
 
 서적 : the cathedral and the bazaar
