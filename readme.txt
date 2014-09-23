@@ -15,65 +15,15 @@ web os
 	 - url만 넘기면 자동으로 db에서 값을 불러와준다.
 	 -
  
-# 언어, language, lang
-	go
+ 	go
 	 -http://ko.wikipedia.org/wiki/Go_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)
 
-# 지식, information
-	
 	c++ template 전문화
 	 - 함수 템플릿의 전문화(Specialization)라는 특별한 상황에 맞는 함수를 만들면 함수 오버로드와 같이 
 	   컴파일러가 상황에 맞는 함수를 선택하도록 한다
 	
 	non-type function template
 	 - template <typename T, int VAL>처럼 typename외의 파라미터를 전달
-	 
-	
-	
- 	Spring
- 	 - HelloWorld.java
- 	 	package com.tutorialspoint;
-
-		public class HelloWorld {
-		   private String message;
-		
-		   public void setMessage(String message){
-		      this.message  = message;
-		   }
-		
-		   public void getMessage(){
-		      System.out.println("Your Message : " + message);
-		   }
-		}
- 	 	
- 	 - MainApp.java
- 	 	package com.tutorialspoint;
-
-		import org.springframework.context.ApplicationContext;
-		import org.springframework.context.support.ClassPathXmlApplicationContext;
-		
-		public class MainApp {
-		   public static void main(String[] args) {
-		      ApplicationContext context = 
-		             new ClassPathXmlApplicationContext("Beans.xml");
-		
-		      HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
-		
-		      obj.getMessage();
-		   }
-		}
-		
- 	 - Beans.xml
- 	 	<?xml version="1.0" encoding="UTF-8"?>
-		<beans xmlns="http://www.springframework.org/schema/beans"
-		    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		    xsi:schemaLocation="http://www.springframework.org/schema/beans
-		    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-		
-		   	<bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
-		       <property name="message" value="Hello World!"/>
-		   	</bean>
-		</beans>
  	 
  	
  	Appium
