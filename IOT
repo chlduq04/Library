@@ -4,15 +4,15 @@ OpenIoT
  - 인터넷-연결 대상(센서 네트워크)들의 모빌리티 측면에 초점을 맞춰 에너지 효율적인 센서 데이터 수집과 그 데이터의 클라우드로의 전송을 추구
  
 IBM의 IOT
-	- IBM의 여러가지 IOT 프로젝트들 (ex)the cloud sourced weather map...
-	1. Device & Connectivity (MQTT, Device Connectivity, IBM IOT..)
-	2. Platform as a service (Cloud Foundary, IBM Bluemix...)
-	3. Application development (Node-RED)
-	
-	- MQTT(IBM의 IOT 프로토콜) 현재는 websocket도 지원 
-	이미 nodejs 안에 MQTT라이브러리가 제공
-	IBM의 cloud service를 제공
-	웹 서비스에 연결된 Device의 정보를 등록, 관리가 가능하다.
+ - IBM의 여러가지 IOT 프로젝트들 (ex)the cloud sourced weather map...
+ 1. Device & Connectivity (MQTT, Device Connectivity, IBM IOT..)
+ 2. Platform as a service (Cloud Foundary, IBM Bluemix...)
+ 3. Application development (Node-RED)
+
+ - MQTT(IBM의 IOT 프로토콜) 현재는 websocket도 지원  
+ 이미 nodejs 안에 MQTT라이브러리가 제공
+ IBM의 cloud service를 제공 
+ 웹 서비스에 연결된 Device의 정보를 등록, 관리가 가능하다.
 	 
 GSI
  - 전 세계 IOT 물류에 관한 규격
