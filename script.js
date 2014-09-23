@@ -162,6 +162,8 @@ function check_lock(switch, func){
 	return function(param){
 		if(switch){
 			func(param);
+		}else{
+			//...
 		}
 	}
 }
