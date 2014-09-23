@@ -43,6 +43,10 @@
 	   	</bean>
 	</beans>
 
+Android의 이미지 불러오기 및 메모리 해제
+ - 안드로이드는 내부 루틴으로 사진이나 이미지를을 불러오고 해제하는 가비지 컬렉터와는 다른 루틴을 가지고 있다.
+ 그러므로 메모리를 null로 할당하면 곧 메모리를 해제한다.
+
 Java windows 자동실행 app
   - java service warpper
   - http://ggons.tistory.com/28
