@@ -28,3 +28,59 @@
 	  	 
  	NFV(Network Function Virtualization)
  	 - 
+	
+	samsung open source 컨퍼런스
+	
+	Big Data Cloud
+	 - cloud OS + hypervisor = cloud service (cloud stack, open stack)
+	 public cloud / management hosting을 보통 초기에 사용하게 되지만 비용이 많이든다
+ 	 그래서 자체 cloud를 만들게 된다.
+	
+	 - ex) Apache cloud stack
+	 Reliability : 하나의 물리 서버 위에 여러개의 가상서버가 들어간다. 서버 하나가 잘못되면 큰 문제가 된다.
+	 Privisioning and Monitoring : Not only VM but also Bare-Metal
+	 I/O overhead : 수 테러바이트 이상을 쓰고 읽는데 heavy I/O treffic이 일어나면 모든 연결된 VM들이 문제가 생긴다.
+	 
+	 그리고 보통 이런 문제들은
+	 hard-disk : 70%
+	 raid : 6%
+	 memory : 5%
+	 other : 18%
+	 
+	 특히나 I/O의 오버헤드가 일어나는데 여러 data를 분류하여(폼 제어) 데이터를 넣기 때문에 많은 overhead가 일어난다. 
+	 -> 그래서 SR-IOV 환경에서 Live Migration을 구현
+	 
+	IBM의 IOT
+	 - IBM의 여러가지 IOT 프로젝트들 (ex)the cloud sourced weather map...
+	 1. Device & Connectivity (MQTT, Device Connectivity, IBM IOT..)
+	 2. Platform as a service (Cloud Foundary, IBM Bluemix...)
+	 3. Application development (Node-RED)
+	 
+	 - MQTT(IBM의 IOT 프로토콜) 현재는 websocket도 지원 
+	 이미 nodejs 안에 MQTT라이브러리가 제공
+	 IBM의 cloud service를 제공
+	 웹 서비스에 연결된 Device의 정보를 등록, 관리가 가능하다.
+	 
+	GSI
+	 - 전 세계 IOT 물류에 관한 규격
+	 Oliot라는 카이스트 IOT플렛폼이 있다.
+	 
+	OpenSource 수업
+	 - 조교들조차 모든 정보를 아는것이 아니라 정보가 부족했다.
+	 세팅이 오래걸리고 어렵다.
+	 
+	 REEF : Big Data Processing Platform
+	 TaintDroid : 휴대폰에서 나가는 모든 data를 분석하여 잡아내는 opensource
+	 
+	Tizen for Automotive
+	 - 두가지의 큰 트렌드 : opensource, 자동차 내부 컨텐츠
+	 사람들은 많은 시간을 자동차 안에서 보낸다. 그래서 많은 컨텐츠를 만들 수 있다.
+	 허나 자동차 업계에서 바라는 OS는 많은 요구조건이 있다. (부팅시간은 5초이내, 카메라로딩 3초이내)
+	 또한 사용자 입장에서 핸즈프리, 다중 디스플레이 등이 필요.
+	 자동차에는 다양한 임베디드 시스템이 들어간다. 그렇기 때문에 서로다른 플렛폼에서 개발틀이 같은 App기반을 제공해야 한다.
+	 또한 자동차 회사마다 차 종류마다 통신 프로토콜이 다르다. 이걸 통합하고 있다(Yocto)
+	 
+	 - 허나 WWW는 자동차 web app의 protocol을 정하지 않았으나 이를 개발하고 있다. 그래서 W3C에서 제공하려 하고 이것이 제정되면 모든 차들이 이것을 따라야한다
+	 security도 중요한 사항(isolation of the app, destriction of the service, destriction of the app network, secure app lifecycle)
+	 
+	 
