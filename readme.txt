@@ -14,7 +14,6 @@ web os
 	django restful framework
 	 - url만 넘기면 자동으로 db에서 값을 불러와준다.
 	 -
-
  	
  	Appium
 	 - http://appium.io
@@ -39,11 +38,6 @@ web os
 	OpenDaylight
 	 - http://www.opendaylight.org
 	 - 다른 요소 없이 직접적으로 배치할 수 있는 완전하게 기능적인 SDN 플랫폼을 제공하는 것
-	 
-	OpenIoT
-	 - http://openiot.eu
-	 - 유럽연합 집행위원회의 자금지원을 받은 연구 프로젝트로 클라우드 컴퓨팅 제공 모델을 활용하는 새로운 오픈, 대규모, 지능형 사물인터넷 애플리케이션을 새롭게 총체적으로 활성화하는 것이 목표
-	 - 인터넷-연결 대상(센서 네트워크)들의 모빌리티 측면에 초점을 맞춰 에너지 효율적인 센서 데이터 수집과 그 데이터의 클라우드로의 전송을 추구
 	 
 	Serverspec
 	 - http://serverspec.org 
