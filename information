@@ -50,21 +50,7 @@
 	 특히나 I/O의 오버헤드가 일어나는데 여러 data를 분류하여(폼 제어) 데이터를 넣기 때문에 많은 overhead가 일어난다. 
 	 -> 그래서 SR-IOV 환경에서 Live Migration을 구현
 	 
-	IBM의 IOT
-	 - IBM의 여러가지 IOT 프로젝트들 (ex)the cloud sourced weather map...
-	 1. Device & Connectivity (MQTT, Device Connectivity, IBM IOT..)
-	 2. Platform as a service (Cloud Foundary, IBM Bluemix...)
-	 3. Application development (Node-RED)
-	 
-	 - MQTT(IBM의 IOT 프로토콜) 현재는 websocket도 지원 
-	 이미 nodejs 안에 MQTT라이브러리가 제공
-	 IBM의 cloud service를 제공
-	 웹 서비스에 연결된 Device의 정보를 등록, 관리가 가능하다.
-	 
-	GSI
-	 - 전 세계 IOT 물류에 관한 규격
-	 Oliot라는 카이스트 IOT플렛폼이 있다.
-	 
+	
 	OpenSource 수업
 	 - 조교들조차 모든 정보를 아는것이 아니라 정보가 부족했다.
 	 세팅이 오래걸리고 어렵다.
