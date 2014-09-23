@@ -39,9 +39,6 @@ web os
 		11. http://downloadsquad.switched.com/2009/11/11/go-go-google-gopher-go-google-invents-its-own-programming-la/ SWITCHED Go 출시 기사
 		12. http://en.wikipedia.org/wiki/Newsqueak Newsqueak 프로그래밍 언어
 
-	c++ template 전문화
-	 - 함수 템플릿의 전문화(Specialization)라는 특별한 상황에 맞는 함수를 만들면 함수 오버로드와 같이 
-	   컴파일러가 상황에 맞는 함수를 선택하도록 한다
 	
 	non-type function template
 	 - template <typename T, int VAL>처럼 typename외의 파라미터를 전달
@@ -90,9 +87,6 @@ web os
 	
 	서버 가상화
 	
-	C
-	 - NDK : external/0을 접근할 경우 0 대신에 legacy를 적으면 될 경우가 있다
-	
 	hoodop
 	 - 
 	
@@ -101,13 +95,7 @@ web os
 	 - 
  	 
  	AspectJ
- 	 - 
- 
- 	Html5 application cache
- 	 - manifest.json을 바꿈으로써 대용량의 파일을 사용자의 cache로 만들 수 있다.
- 	
- 	Web worker
- 	 - thread를 흉내내는 js
+ 	 -
  	 
  	Open XML
  	 -
