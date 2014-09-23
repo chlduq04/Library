@@ -14,35 +14,7 @@ web os
 	django restful framework
 	 - url만 넘기면 자동으로 db에서 값을 불러와준다.
 	 -
- 
- 	go
-	 - http://ko.wikipedia.org/wiki/Go_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)
-	 - 특징
-	 	1. 개발속도(하드웨어 개발 vs 소프트웨어 개발)
-		2. 모듈화를 위한 의존성
-		3. 동적타입 언어의 속성을 가진 언어
-		4. 가비지 콜렉션(Garbage Collection)
-		5. 병렬처리(Parallelism)
-		
-	 - 추가자료	
-	 	0.  http://www.imaso.co.kr/?doc=bbs/gnuboard.php&bo_table=article&wr_id=38206
-		1.  http://golang.org Go 프로그래밍 언어 웹사이트
-		2.  http://en.wikipedia.org/wiki/Ken_Thompson  켄 톰슨
-		3.  http://en.wikipedia.org/wiki/Rob_Pike 롭 파이크
-		4.  http://www.tiobe.com TIOBE
-		5.  http://golang.kr Go프로그래밍언어 문서 한글화 작업 페이지
-		6.  http://en.wikipedia.org/wiki/Go_(programming_language) Wikipedia Go언어
-		7.  http://en.wikipedia.org/wiki/50_Greatest_Players_in_NBA_History NBA 역사상 Top 10 Teams
-		8.  http://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs Plan 9 운영체제
-		9.  http://xkcd.com/ 웹코믹스. ‘컴파일(Compiling)‘ 만화 이외에도 개발자들이 공감할만한 만화가 많다.
-		10. http://news.cnet.com/8301-30685_3-10393210-264.html CNET Go 출시 기사
-		11. http://downloadsquad.switched.com/2009/11/11/go-go-google-gopher-go-google-invents-its-own-programming-la/ SWITCHED Go 출시 기사
-		12. http://en.wikipedia.org/wiki/Newsqueak Newsqueak 프로그래밍 언어
 
-	
-	non-type function template
-	 - template <typename T, int VAL>처럼 typename외의 파라미터를 전달
- 	 
  	
  	Appium
 	 - http://appium.io
