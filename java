@@ -1,3 +1,143 @@
+ JSP 
+  - setup.java
+  	protected final static boolean DEBUG_MODE = true;
+	protected Connection conn = null;
+
+	public final void Log(Object obj){
+		if(DEBUG_MODE){
+			System.out.println(obj.toString());
+		}
+	}
+
+	public final int numberPstmtExecute(String query, Object ...setStr)throws SQLException, NamingException{
+		ConnectionSet cs = new ConnectionSet();
+		cs.Execute(query, setStr);
+		cs.ExecuteResult();
+		cs.rs.last();
+		int count = cs.rs.getRow();
+		cs.Close();
+		return count;
+	}
+
+	public final ConnectionSet makePstmtExecute(String query, Object ...setStr) throws SQLException, NamingException{
+		ConnectionSet cs = new ConnectionSet();
+		cs.Execute(query, setStr);		
+		cs.ExecuteResult();
+		return cs;
+	}
+
+	public final int makePstmtUpdate(String query, Object ...setStr) throws SQLException, NamingException{
+		ConnectionSet cs = new ConnectionSet();
+		cs.Execute(query, setStr);
+		int count = cs.UpdateResult();
+		cs.Close();
+		return count;
+	}	
+
+	public final ConnectionSet getIdPstmtUpdate(String query, Object ...setStr) throws SQLException, NamingException{
+		ConnectionSet cs = new ConnectionSet();
+		cs.Execute(query, PreparedStatement.RETURN_GENERATED_KEYS, setStr);
+		ResultSet id = null;
+		cs.UpdateResult();
+		return cs;
+	}
+
+	public final Profile upload_file(HttpServletRequest request, String filepath) throws SQLException{
+		try{
+			int sizeLimit = 5 * 1024 * 1024 ; // 5메가까지 제한 넘어서면 예외발생
+			MultipartRequest multi;
+			multi = new MultipartRequest(request, filepath, sizeLimit, "utf-8", new DefaultFileRenamePolicy());
+			Enumeration file = multi.getFileNames();
+			String name = (String)file.nextElement();//파라메터이름을 가져온뒤
+			String filename = multi.getFilesystemName(name);//이름을 이용해 저장된 파일이름을 가져온다.
+			Log("이미지 업로드 완료 파일명 : " + filename);
+			return new Profile(multi.getParameter("user_name"),multi.getParameter("user_id"), multi.getParameter("user_password"), filename);
+		}catch(IOException e){
+			return null;
+		}
+	}
+
+	public final void delete_file(String filename, String filepath){
+		Log("Delete : "+filepath + filename);
+		new File(filepath + filename).delete();
+	}
+ 
+  - ConnectionSet.java
+  	private final static String DB_ENV = "java:comp/env/jdbc/postitdb";
+	private final static boolean DEBUG_MODE = true;
+	public PreparedStatement pstmt;
+	public Connection conn;
+	public ResultSet rs;
+
+	public ConnectionSet() throws SQLException, NamingException{
+		this.conn = ((DataSource) (new InitialContext()).lookup(DB_ENV)).getConnection();
+	}
+	
+	public ConnectionSet(Connection conn, PreparedStatement pstmt, ResultSet rs){
+		this.conn = conn; 
+		this.pstmt = pstmt;
+		this.rs = rs;
+	}
+		
+	public final void Log(Object obj){
+		if(DEBUG_MODE){
+			System.out.println(obj.toString());
+		}
+	}
+	
+	public void Execute(String query, Object...setStr) throws SQLException{
+		pstmt = conn.prepareStatement(query);
+		for( int i=0 ; i < setStr.length ; i++ ){
+			if(setStr[i] instanceof String){
+				pstmt.setString(i+1, (String)setStr[i]);
+			}else if(setStr[i] instanceof Integer){
+				pstmt.setInt(i+1, (Integer)setStr[i]);
+			}
+		}
+		Log(pstmt);
+	}
+
+	public void Execute(String query, int option, Object...setStr) throws SQLException{
+		pstmt = conn.prepareStatement(query, option);
+		for( int i=0 ; i < setStr.length ; i++ ){
+			if(setStr[i] instanceof String){
+				pstmt.setString(i+1, (String)setStr[i]);
+			}else if(setStr[i] instanceof Integer){
+				pstmt.setInt(i+1, (Integer)setStr[i]);
+			}
+		}
+		Log(pstmt);
+	}
+	
+	public int UpdateResult() throws SQLException{
+		return pstmt.executeUpdate();
+	}
+	
+	public ResultSet ExecuteResult() throws SQLException{
+		rs = pstmt.executeQuery();
+		return rs;
+	}
+	
+	public ResultSet GetGeneratedKeys() throws SQLException{
+		return pstmt.getGeneratedKeys();
+	}
+
+	public void Close() throws SQLException{
+		if(rs != null){
+			rs.close();
+		}
+		
+		if(pstmt != null){
+			pstmt.close();
+		}
+		
+		if(conn != null){
+			conn.close();
+		}
+	}
+ 
+ 
+ 
  Spring
   - HelloWorld.java
   	package com.tutorialspoint;
