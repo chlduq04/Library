@@ -3,13 +3,13 @@
   	protected final static boolean DEBUG_MODE = true;
 	protected Connection conn = null;
 
-	public final void Log(Object obj){
+	protected final void Log(Object obj){
 		if(DEBUG_MODE){
 			System.out.println(obj.toString());
 		}
 	}
 
-	public final int numberPstmtExecute(String query, Object ...setStr)throws SQLException, NamingException{
+	protected final int numberPstmtExecute(String query, Object ...setStr)throws SQLException, NamingException{
 		ConnectionSet cs = new ConnectionSet();
 		cs.Execute(query, setStr);
 		cs.ExecuteResult();
@@ -19,14 +19,14 @@
 		return count;
 	}
 
-	public final ConnectionSet makePstmtExecute(String query, Object ...setStr) throws SQLException, NamingException{
+	protected final ConnectionSet makePstmtExecute(String query, Object ...setStr) throws SQLException, NamingException{
 		ConnectionSet cs = new ConnectionSet();
 		cs.Execute(query, setStr);		
 		cs.ExecuteResult();
 		return cs;
 	}
 
-	public final int makePstmtUpdate(String query, Object ...setStr) throws SQLException, NamingException{
+	protected final int makePstmtUpdate(String query, Object ...setStr) throws SQLException, NamingException{
 		ConnectionSet cs = new ConnectionSet();
 		cs.Execute(query, setStr);
 		int count = cs.UpdateResult();
@@ -34,7 +34,7 @@
 		return count;
 	}	
 
-	public final ConnectionSet getIdPstmtUpdate(String query, Object ...setStr) throws SQLException, NamingException{
+	protected final ConnectionSet getIdPstmtUpdate(String query, Object ...setStr) throws SQLException, NamingException{
 		ConnectionSet cs = new ConnectionSet();
 		cs.Execute(query, PreparedStatement.RETURN_GENERATED_KEYS, setStr);
 		ResultSet id = null;
@@ -42,7 +42,7 @@
 		return cs;
 	}
 
-	public final Profile upload_file(HttpServletRequest request, String filepath) throws SQLException{
+	protected Profile upload_file(HttpServletRequest request, String filepath) throws SQLException{
 		try{
 			int sizeLimit = 5 * 1024 * 1024 ; // 5메가까지 제한 넘어서면 예외발생
 			MultipartRequest multi;
@@ -57,7 +57,7 @@
 		}
 	}
 
-	public final void delete_file(String filename, String filepath){
+	protected void delete_file(String filename, String filepath){
 		Log("Delete : "+filepath + filename);
 		new File(filepath + filename).delete();
 	}
