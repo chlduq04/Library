@@ -225,3 +225,15 @@ function easy_get_ajax_call( url, ifsuccess, iferror ){
 		}
 	});		
 }
+
+$("").keypress(function(event){
+	if(event.keyCode == "13"){
+		var child = $(this).children().find("input");
+		for(var i = 0 ; i < child.length ; i++){
+			if($(child[i]).val().trim() == ""){
+				$(child[i]).focus();
+				return;
+			}
+		}
+	}
+})
