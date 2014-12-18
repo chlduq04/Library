@@ -1,4 +1,6 @@
  JSP 
+  - jsp 이미지 업로드 실시간 refresh
+	jsp 이미지업로드가 실시간으로 안될시 : perferences->general->workspace->refresh체크
   - setup.java
   	protected final static boolean DEBUG_MODE = true;
 	protected Connection conn = null;
