@@ -226,6 +226,8 @@ function easy_get_ajax_call( url, ifsuccess, iferror ){
 	});		
 }
 
+/**---------------------------- input check and detect empty input -----------------------------**/
+
 $("").keypress(function(event){
 	if(event.keyCode == "13"){
 		var child = $(this).children().find("input");
@@ -237,3 +239,31 @@ $("").keypress(function(event){
 		}
 	}
 })
+
+/**---------------------------- display_none or visibility_hidden -----------------------------**/
+
+function custom_css(options) {
+	var options = options || {};
+	this.display_none = (typeof options.display_none !== 'undefined') ? options.display_none : "display_none";
+	this.visibility_hidden = (typeof options.visibility_hidden !== 'undefined') ? options.visibility_hidden : "visibility_hidden";
+	var custom = "<style>." + this.display_none + "{display:none;}." + this.visibility_hidden + "{visibility:hidden;}</style>";
+	$("head").append(custom);
+
+}
+custom_css.prototype.jquery_extend = function () {
+	var self = this;
+	$.fn.extend({
+		display : function (option) {
+			return this.each(function () { (option != true) ? $(this).addClass(self.display_none) : $(this).removeClass(self.display_none); });
+		},
+		visible : function(){
+			return this.each(function(){ (option != true) ? $(this).addClass(self.visibility_hidden) : $(this).removeClass(self.visibility_hidden); })
+		}
+	});
+}
+custom_css.prototype.display = function (target, option) {
+	(option != true) ? target.addClass(this.display_none) : target.removeClass(this.display_none);
+}
+custom_css.prototype.visible = function (target, option) {
+	(optoin != true) ? target.addClass(this.visibility_hidden) : target.removeClass(this.visibility_hidden);
+}
