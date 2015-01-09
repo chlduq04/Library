@@ -248,7 +248,7 @@ function custom_css(options) {
 	this.visibility_hidden = (typeof options.visibility_hidden !== 'undefined') ? options.visibility_hidden : "visibility_hidden";
 	var custom = "<style>." + this.display_none + "{display:none;}." + this.visibility_hidden + "{visibility:hidden;}</style>";
 	$("head").append(custom);
-
+	if($){this.jquery_extend()}
 }
 custom_css.prototype.jquery_extend = function () {
 	var self = this;
@@ -267,3 +267,4 @@ custom_css.prototype.display = function (target, option) {
 custom_css.prototype.visible = function (target, option) {
 	(optoin != true) ? target.addClass(this.visibility_hidden) : target.removeClass(this.visibility_hidden);
 }
+
