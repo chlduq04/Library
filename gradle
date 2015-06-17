@@ -1,0 +1,120 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'gs-serving-mobile-web-content'
+    version = '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+configurations {
+}
+
+dependencies {
+//    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-actuator')    
+    
+    compile("org.hibernate:hibernate-validator")
+    compile("org.apache.tomcat.embed:tomcat-embed-el")
+ 
+ 	compile("org.webjars:jquery:2.0.3-1")  
+ 	compile('org.antlr:antlr-runtime:3.5.2')
+ 	
+ 	compile('org.json:json:20141113')
+ 	compile('javax.servlet:jstl:1.2')
+	compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+    
+    testCompile("junit:junit")
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
+-------------------------------------------------------------------------------------------------------
+package configuration;
+
+import interceptor.AuthorizationInterceptor;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
+
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages={
+		"application","controller","data","interceptor","configuration",
+		"JSper.Controller","JSper.Model","JSper.Antlr"
+})
+public class Congifuration extends WebMvcConfigurerAdapter{
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(new AuthorizationInterceptor()).addPathPatterns("/authorization/*");
+	}
+
+	@Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**").addResourceLocations("resources/");
+    }
+	
+	@Override
+	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+		configurer.enable();
+	}
+
+	@Bean
+    public InternalResourceViewResolver viewResolver() {
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+        resolver.setPrefix("/META-INF/jsp/");
+        resolver.setSuffix(".jsp");
+        resolver.setViewClass(JstlView.class);
+        return resolver;
+    }
+	/*
+	@Bean
+    public ServletContextTemplateResolver viewResolver() {
+		ServletContextTemplateResolver  resolver = new ServletContextTemplateResolver ();
+        resolver.setPrefix("/templates/");
+        resolver.setSuffix(".html");
+        resolver.setTemplateMode("LEGACYHTML5");
+        resolver.setCacheable(false);
+        return resolver;
+      }
+    */
+}
+
+-------------------------------------------------------------------------------------------------------
+
+src
+  main
+    java
+    resource
+    webapp
+      META-INF
+        jsp
