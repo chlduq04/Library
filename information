@@ -1,72 +1,126 @@
- 	PaaS(Platform as a Service)
- 	 - 개발자들이 호스팅할 기반 하드웨어 걱정 없이 클라우드 안에서 실행되는 애플리케이션을 구축
- 	 
- 	IaaS(infrastructure as a service)
- 	 - 가상 컴퓨트, 스토리지, 데이터베이스, 온디맨드 인프라 하드웨어 서비스를 제공
- 	 
- 	SaaS(software as a service)
- 	 - 클라우드 기반 애플리케이션을 서비스
+ PaaS(Platform as a Service)
+  - 개발자들이 호스팅할 기반 하드웨어 걱정 없이 클라우드 안에서 실행되는 애플리케이션을 구축
+  
+ IaaS(infrastructure as a service)
+  - 가상 컴퓨트, 스토리지, 데이터베이스, 온디맨드 인프라 하드웨어 서비스를 제공
+  
+ SaaS(software as a service)
+  - 클라우드 기반 애플리케이션을 서비스
 
- 	AOP(관점 지향 프로그래밍)
- 	 - 관점 지향 프로그래밍은 프로그램을 명확한 부분으로 나누는 것을 수반한다. 
- 	 모든 프로그래밍 패러다임은 이들 관심사들을 구현, 추상화, 구성하는 추상적 개념을 제공하는 분리되고, 독립적인 통로들을 통해 Grouping의 같은 레벨과 관심사들의 캡슐화(Encapsulation)를 지원한다. 
- 	 그러나 어떤 관심사들은 구현의 이런 형태를 거역하고, 이들이 프로그램 내에서 다중 추상적 개념들에 영향을 끼치기 때문에 횡단관심사(cross-cutting concerns)라고 불린다.
- 	
- 	SDN(Software Defined Networking)   
- 	 - 수년 동안 컴퓨터 과학자들은 네트워크의 속도와 안정성, 에너지 효율, 보안 등을 획기적으로 개선시킬 수 있는 방법을 찾고 있으나 
- 	 그 방법을 설계하거나 고안하더라도, 실제로 대규모(large-scale)로 실험하거나 검증하는 것은 불가능했다. 
- 	 인터넷의 코어(core)를 구성하는 라우터나 스위치들이 이른바 완전히 닫혀 있어서 그 위에서 새로운 소프트웨어나 프로그램을 실험하는 것이 원천적으로 봉쇄되었기 때문이다.
- 	
- 	 그런 정의에 의해 나온 SDN은 소프트웨어 정의 네트워킹이라고 한다.
- 	 SDN이라면 기본적으로 네트워크 제어 기능이 기존의 스위치나 라우터 등의 하드웨어와 별도로 분리되어야 하고, 
- 	 데이터 전달 기능과도 역시 분리되어 개발 및 실행될 수 있는 네트워크 구조를 가져야 한다.
- 	 
- 	 SDN은 소프트웨어 정의 포워딩(Software Defined Forwarding)을 해야 한다. 이것은 스위치와 같은 하드웨어가 수행하는 데이터 포워딩 기능이 반드시 개방형 인터페이스와 소프트웨어를 통해서 제어되어야만 한다는 것을 의미한다
- 	 SDN이 추상화된 글로벌 관리 혹은 글로벌 관리 추상화(Global Management Abstraction)를 목표로 한다는 것이다. SDN은 기본적인 글로벌 관리 추상화를 지원함으로서 보다 선도적인 네트워크 관리 툴이 개발될 수 있도록 해야 한다. 
- 	  예를 들면 이런 추상화 도구들은 네트워크의 글로벌 뷰, 네트워크 이벤트(토폴로지 변화나 새로운 플로우 생성 등)에 따른 반응, 그리고 네트워크 요소를 제어할 수 있는 기능 등을 포함할 수 있다(네트워크 요소 제어는 해당 엔트리를 하드웨어의 포워딩 테이블에 넣는 방법을 사용한다).
-	 "오늘날 보안, 라우팅, 에너지 효율 관리 등은 단지 기계덩어리인 네트워크 장비에 의해 좌지우지됩니다. 그건 정말 바꾸기 힘들지요. 이것이 바로 인터넷 인프라가 40년 동안이나 변하지 않은 이유입니다."
-	  	 
- 	NFV(Network Function Virtualization)
- 	 - 
-	
-	samsung open source 컨퍼런스
-	
-	Big Data Cloud
-	 - cloud OS + hypervisor = cloud service (cloud stack, open stack)
-	 public cloud / management hosting을 보통 초기에 사용하게 되지만 비용이 많이든다
- 	 그래서 자체 cloud를 만들게 된다.
-	
-	 - ex) Apache cloud stack
-	 Reliability : 하나의 물리 서버 위에 여러개의 가상서버가 들어간다. 서버 하나가 잘못되면 큰 문제가 된다.
-	 Privisioning and Monitoring : Not only VM but also Bare-Metal
-	 I/O overhead : 수 테러바이트 이상을 쓰고 읽는데 heavy I/O treffic이 일어나면 모든 연결된 VM들이 문제가 생긴다.
-	 
-	 그리고 보통 이런 문제들은
-	 hard-disk : 70%
-	 raid : 6%
-	 memory : 5%
-	 other : 18%
-	 
-	 특히나 I/O의 오버헤드가 일어나는데 여러 data를 분류하여(폼 제어) 데이터를 넣기 때문에 많은 overhead가 일어난다. 
-	 -> 그래서 SR-IOV 환경에서 Live Migration을 구현
-	 
-	
-	OpenSource 수업
-	 - 조교들조차 모든 정보를 아는것이 아니라 정보가 부족했다.
-	 세팅이 오래걸리고 어렵다.
-	 
-	 REEF : Big Data Processing Platform
-	 TaintDroid : 휴대폰에서 나가는 모든 data를 분석하여 잡아내는 opensource
-	 
-	Tizen for Automotive
-	 - 두가지의 큰 트렌드 : opensource, 자동차 내부 컨텐츠
-	 사람들은 많은 시간을 자동차 안에서 보낸다. 그래서 많은 컨텐츠를 만들 수 있다.
-	 허나 자동차 업계에서 바라는 OS는 많은 요구조건이 있다. (부팅시간은 5초이내, 카메라로딩 3초이내)
-	 또한 사용자 입장에서 핸즈프리, 다중 디스플레이 등이 필요.
-	 자동차에는 다양한 임베디드 시스템이 들어간다. 그렇기 때문에 서로다른 플렛폼에서 개발틀이 같은 App기반을 제공해야 한다.
-	 또한 자동차 회사마다 차 종류마다 통신 프로토콜이 다르다. 이걸 통합하고 있다(Yocto)
-	 
-	 - 허나 WWW는 자동차 web app의 protocol을 정하지 않았으나 이를 개발하고 있다. 그래서 W3C에서 제공하려 하고 이것이 제정되면 모든 차들이 이것을 따라야한다
-	 security도 중요한 사항(isolation of the app, destriction of the service, destriction of the app network, secure app lifecycle)
-	 
-	 
+ AOP(관점 지향 프로그래밍)
+  - 관점 지향 프로그래밍은 프로그램을 명확한 부분으로 나누는 것을 수반한다. 
+  모든 프로그래밍 패러다임은 이들 관심사들을 구현, 추상화, 구성하는 추상적 개념을 제공하는 분리되고, 독립적인 통로들을 통해 Grouping의 같은 레벨과 관심사들의 캡슐화(Encapsulation)를 지원한다. 
+  그러나 어떤 관심사들은 구현의 이런 형태를 거역하고, 이들이 프로그램 내에서 다중 추상적 개념들에 영향을 끼치기 때문에 횡단관심사(cross-cutting concerns)라고 불린다.
+ 
+ SDN(Software Defined Networking)   
+  - 수년 동안 컴퓨터 과학자들은 네트워크의 속도와 안정성, 에너지 효율, 보안 등을 획기적으로 개선시킬 수 있는 방법을 찾고 있으나 
+  그 방법을 설계하거나 고안하더라도, 실제로 대규모(large-scale)로 실험하거나 검증하는 것은 불가능했다. 
+  인터넷의 코어(core)를 구성하는 라우터나 스위치들이 이른바 완전히 닫혀 있어서 그 위에서 새로운 소프트웨어나 프로그램을 실험하는 것이 원천적으로 봉쇄되었기 때문이다.
+ 
+  그런 정의에 의해 나온 SDN은 소프트웨어 정의 네트워킹이라고 한다.
+  SDN이라면 기본적으로 네트워크 제어 기능이 기존의 스위치나 라우터 등의 하드웨어와 별도로 분리되어야 하고, 
+  데이터 전달 기능과도 역시 분리되어 개발 및 실행될 수 있는 네트워크 구조를 가져야 한다.
+  
+  SDN은 소프트웨어 정의 포워딩(Software Defined Forwarding)을 해야 한다. 이것은 스위치와 같은 하드웨어가 수행하는 데이터 포워딩 기능이 반드시 개방형 인터페이스와 소프트웨어를 통해서 제어되어야만 한다는 것을 의미한다
+  SDN이 추상화된 글로벌 관리 혹은 글로벌 관리 추상화(Global Management Abstraction)를 목표로 한다는 것이다. SDN은 기본적인 글로벌 관리 추상화를 지원함으로서 보다 선도적인 네트워크 관리 툴이 개발될 수 있도록 해야 한다. 
+   예를 들면 이런 추상화 도구들은 네트워크의 글로벌 뷰, 네트워크 이벤트(토폴로지 변화나 새로운 플로우 생성 등)에 따른 반응, 그리고 네트워크 요소를 제어할 수 있는 기능 등을 포함할 수 있다(네트워크 요소 제어는 해당 엔트리를 하드웨어의 포워딩 테이블에 넣는 방법을 사용한다).
+ "오늘날 보안, 라우팅, 에너지 효율 관리 등은 단지 기계덩어리인 네트워크 장비에 의해 좌지우지됩니다. 그건 정말 바꾸기 힘들지요. 이것이 바로 인터넷 인프라가 40년 동안이나 변하지 않은 이유입니다."
+  	 
+ NFV(Network Function Virtualization)
+  - 
+
+samsung open source 컨퍼런스
+
+Big Data Cloud
+ - cloud OS + hypervisor = cloud service (cloud stack, open stack)
+ public cloud / management hosting을 보통 초기에 사용하게 되지만 비용이 많이든다
+  그래서 자체 cloud를 만들게 된다.
+
+ - ex) Apache cloud stack
+ Reliability : 하나의 물리 서버 위에 여러개의 가상서버가 들어간다. 서버 하나가 잘못되면 큰 문제가 된다.
+ Privisioning and Monitoring : Not only VM but also Bare-Metal
+ I/O overhead : 수 테러바이트 이상을 쓰고 읽는데 heavy I/O treffic이 일어나면 모든 연결된 VM들이 문제가 생긴다.
+ 
+ 그리고 보통 이런 문제들은
+ hard-disk : 70%
+ raid : 6%
+ memory : 5%
+ other : 18%
+ 
+ 특히나 I/O의 오버헤드가 일어나는데 여러 data를 분류하여(폼 제어) 데이터를 넣기 때문에 많은 overhead가 일어난다. 
+ -> 그래서 SR-IOV 환경에서 Live Migration을 구현
+ 
+
+OpenSource 수업
+ - 조교들조차 모든 정보를 아는것이 아니라 정보가 부족했다.
+ 세팅이 오래걸리고 어렵다.
+ 
+ REEF : Big Data Processing Platform
+ TaintDroid : 휴대폰에서 나가는 모든 data를 분석하여 잡아내는 opensource
+ 
+Tizen for Automotive
+ - 두가지의 큰 트렌드 : opensource, 자동차 내부 컨텐츠
+ 사람들은 많은 시간을 자동차 안에서 보낸다. 그래서 많은 컨텐츠를 만들 수 있다.
+ 허나 자동차 업계에서 바라는 OS는 많은 요구조건이 있다. (부팅시간은 5초이내, 카메라로딩 3초이내)
+ 또한 사용자 입장에서 핸즈프리, 다중 디스플레이 등이 필요.
+ 자동차에는 다양한 임베디드 시스템이 들어간다. 그렇기 때문에 서로다른 플렛폼에서 개발틀이 같은 App기반을 제공해야 한다.
+ 또한 자동차 회사마다 차 종류마다 통신 프로토콜이 다르다. 이걸 통합하고 있다(Yocto)
+ 
+ - 허나 WWW는 자동차 web app의 protocol을 정하지 않았으나 이를 개발하고 있다. 그래서 W3C에서 제공하려 하고 이것이 제정되면 모든 차들이 이것을 따라야한다
+ security도 중요한 사항(isolation of the app, destriction of the service, destriction of the app network, secure app lifecycle)
+ 
+Google I/O
+
+permission query
+ - 만약 웹앱에서 직접적으로 geo나 오디오에 접근하려고 할 경우 사용 여부가 아니라 디바이스가 허가되어 있는지가 중요했다. 
+ 직접 권한을 얻지 못하기 때문이다. 그런데 이제 된다!
+ navitator.permissions.query({name:'geolocation'})
+
+thema color
+ - 위의 주소창과 액션 바의 색을 바꿀 수 있다. 곧 위의 주소창 아래의 액션바의 커스터마이징도 가능해질 듯하다. 
+ 디자이너들이 좋아할 듯.
+
+App install banner
+ - 모바일에서 크롬이 자동으로 사용자의 패턴을 파악해서 바로가기를 만들것인지 알림을 띄워준다.
+ 1. manifest.json을 구성해야 한다.(link rel, href 를 지정하여 적어줘야 한다.)
+ 2. ServiceWorker을 기반으로 돌아야한다.
+ 3. https를 사용해야 한다.
+ 4. app banner가 뜨는것은 개발자가 사용할 수 없다.
+ beforeinstallprompt : 를 하면 배너가 뜰지 아닐지 컨트롤 할 수 있다.
+
+Chrome custom tabs
+ - web app을 키는 두 가지 방법으로 지금까지는 web view에서 띄우던가 브라우져에서 띄워야한다.
+ 이제는 custom tabs를 이용해여 shrae all context with chrome
+ 단 좀 느리기 때문에(웹뷰보다는 느리고 크롬 브라우저보단 빠르다) 미리 로딩을 하거나 하는 선 조취가 필요할 것으로 보인다.
+ 시나리오상으로는 내 앱에서 로그인한 페북은 크롬 브라우저로 들어가도 로그인 되어있다. 서로 context를 공유한다.
+
+native app install banner(안드로이드만 가능)
+ - 지금까지는 설치과정을 유도하는 것이 좀 지저분했다. 
+ 하지만 manifest.json을 이용하면 바로 google play service로 이동하여 다운받을 수 있다.
+ 사용자가 2주 동안 2일 이상 들어가면 배너가 뜬다.
+
+Service worker
+ - 지금은 web page는 싱글 thread로 돈다. 이를 보완하기위해 web worker가 있지만 이는 생성 후 thread를 흉내내는것 뿐이였다.
+ 서비스워커는 이와달리 demon처럼 돌면서 독자적인 일을 해결해 나간다. 생성한다고 하지 않고 브라우져에 설치한다고 한다. 
+ 1. caching/offline (오프라인에서도 가능한 브라우저가 될 것이다.)
+  application cache로 offline을 사용하는게 가능하기는 했지만 무엇이 필요한지 어떤 리소스가 바뀌는지 개발자가 전부 알아야했다. 
+  하지만 이 일을 서비스워커가 대신해줄 것이다. 그렇기 때문에 속도도 빨라질 것이고 할 수 있는 일들이 엄청나질 것이다. 물론 manifest.json이 필요하다.
+ 2. push noti (지금도 가능하지만 내 페이지가 떠 있어야 푸시가 가능했다. 이제 가능하다.)
+  simple push demo를 검색해서 모바일로 접속한 후 푸시를 누르면 푸시를 확인할 수 있다.
+ 3. background sync (네트워크 데이터를 항상 실시간으로 보낼 필요가 없어졌다.)
+  한번 접속했던 사이트거나 접속 할 것 같은 사이트의 데이터를 미리 받아서 엄청난 속도로 브라우징이 가능하다.
+ 4. intercept request (어떤 브라우저의 요청을 대신 받아서 이미 등록된 정보를 넘겨줄 수 있다.)
+  예를들어 인증이 필요해 브라우저가 서버에 요청하기전에 이를 워커가 대신잡아서 인증한 정보가 있다면 인증해 줄 것이다.
+ 5. offline google analytics (데이터수집 오프라인으로 가능하다는데 아직 확실하지 않다.)
+  
+polymer
+html import
+custom elemmt
+template
+shadow dom
+chrome - polymer, mozila - brick
+크롬에서 3배 사파리에서 4배 빨라졌지만... 데스크탑 사파리에서는 더 느려짐 ㅋㅋㅋㅋㅋㅋㅋㅋㅋ일단 빨라지긴 한듯, 코드 사이즈가 줄었다.
+폴리머의 5가지 컴포넌트가 있다. 하지만 아직 한국에 전부 적용되지는 않는다.
+ex) 같은 데이터를 html 코드의 tag이름만 바꿈으로써 서로 다른 그래픽을 보여줄 수 있다.
+예를들어 태그이름을 <core-graph/>에서 <core-chart/> 로 바꾸면 그 컴포넌트가 바뀌거나 할 수 있다.
+polycast, google santa-app
