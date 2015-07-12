@@ -73,7 +73,7 @@ Google I/O
 
 permission query
  - 만약 웹앱에서 직접적으로 geo나 오디오에 접근하려고 할 경우 사용 여부가 아니라 디바이스가 허가되어 있는지가 중요했다. 
- 직접 권한을 얻지 못하기 때문이다. 그런데 이제 된다!
+ 직접 권한을 얻지 못하기 때문이다. 그런데 이제 된다! 그리고 점점 될 것이다.
  navitator.permissions.query({name:'geolocation'})
 
 thema color
@@ -85,7 +85,7 @@ App install banner
  1. manifest.json을 구성해야 한다.(link rel, href 를 지정하여 적어줘야 한다.)
  2. ServiceWorker을 기반으로 돌아야한다.
  3. https를 사용해야 한다.
- 4. app banner가 뜨는것은 개발자가 사용할 수 없다.
+ 4. app banner가 뜨는것은 개발자가 깊이 커스텀 할 수 없다.
  beforeinstallprompt : 를 하면 배너가 뜰지 아닐지 컨트롤 할 수 있다.
 
 Chrome custom tabs
@@ -100,7 +100,7 @@ native app install banner(안드로이드만 가능)
  사용자가 2주 동안 2일 이상 들어가면 배너가 뜬다.
 
 Service worker
- - 지금은 web page는 싱글 thread로 돈다. 이를 보완하기위해 web worker가 있지만 이는 생성 후 thread를 흉내내는것 뿐이였다.
+ - 지금은 web page는 싱글 UI thread로 돈다. 이를 보완하기위해 web worker가 있지만 이는 생성 후 thread를 흉내내는것 뿐이였다.
  서비스워커는 이와달리 demon처럼 돌면서 독자적인 일을 해결해 나간다. 생성한다고 하지 않고 브라우져에 설치한다고 한다. 
  1. caching/offline (오프라인에서도 가능한 브라우저가 될 것이다.)
   application cache로 offline을 사용하는게 가능하기는 했지만 무엇이 필요한지 어떤 리소스가 바뀌는지 개발자가 전부 알아야했다. 
@@ -113,14 +113,17 @@ Service worker
   예를들어 인증이 필요해 브라우저가 서버에 요청하기전에 이를 워커가 대신잡아서 인증한 정보가 있다면 인증해 줄 것이다.
  5. offline google analytics (데이터수집 오프라인으로 가능하다는데 아직 확실하지 않다.)
   
-polymer
-html import
-custom elemmt
-template
-shadow dom
-chrome - polymer, mozila - brick
-크롬에서 3배 사파리에서 4배 빨라졌지만... 데스크탑 사파리에서는 더 느려짐 ㅋㅋㅋㅋㅋㅋㅋㅋㅋ일단 빨라지긴 한듯, 코드 사이즈가 줄었다.
-폴리머의 5가지 컴포넌트가 있다. 하지만 아직 한국에 전부 적용되지는 않는다.
-ex) 같은 데이터를 html 코드의 tag이름만 바꿈으로써 서로 다른 그래픽을 보여줄 수 있다.
-예를들어 태그이름을 <core-graph/>에서 <core-chart/> 로 바꾸면 그 컴포넌트가 바뀌거나 할 수 있다.
-polycast, google santa-app
+polymer( chrome - polymer, mozila - brick )
+ - 웹 프론트앤드에서 필요했지만 불가능햇던 여러기능을 모아놓은 API. 아직 polyfill도 없고 제대로 지원되는 브라우져는 크롬 최신뿐이라
+ 상용으로 사용하기엔 불안하지만 그 기능은 매우 훌륭.
+ 크롬에서 3배 사파리에서 4배 빨라졌지만... 데스크탑 사파리에서는 더 느려짐 ㅋㅋㅋㅋㅋㅋㅋㅋㅋ일단 빨라지긴 한듯, 코드 사이즈도 줄었다.
+ 폴리머의 5가지 컴포넌트가 있다. 하지만 아직 한국에 전부 적용되지는 않는다.
+ 주요 기능은 아래와 같다.
+ 1. html import
+ 2. custom elemmt
+ 3. template
+ 4. shadow dom
+
+ ex) 같은 데이터를 html 코드의 tag이름만 바꿈으로써 서로 다른 그래픽을 보여줄 수 있다.
+ 예를들어 태그이름을 <core-graph/>에서 <core-chart/> 로 바꾸면 그 컴포넌트가 바뀌거나 할 수 있다.
+ polycast, google santa-app
