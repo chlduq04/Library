@@ -94,6 +94,19 @@ web os
 #AI
 	AI multi modal
 	PCA -> autoencoder -> deep autoencoder -> GAN -> stable diffusion
+	https://huggingface.co/spaces/stabilityai/stable-diffusion
 	LLM: Chat GPT
 	컨트롤넷
 	메타인지
+
+	인공신경망 2 layer을 쌓으면 그게 하나의 뉴런 - 네이쳐
+
+	고양이 사진을 구분하기 위해서는
+	잘 구축된 인공신경망의 10%~20%의 자원이 필요 vs 뉴런은 0.5% 이하가 반응
+
+	인공지능의 기억법
+	self-attention
+
+	초거대 AI vs 뇌
+	AI: 인간의 문제들을 빅데이터 + 대규모 계산적 자원으로 해결
+	뇌: 제한된 감각과 경험의 한계를 극복하는 방향으로 학습. 그래서 한계를 극복하기 위한 발전을 함
