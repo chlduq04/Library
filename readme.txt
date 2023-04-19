@@ -95,6 +95,7 @@ web os
 	AI multi modal
 	PCA -> autoencoder -> deep autoencoder -> GAN -> stable diffusion
 	https://huggingface.co/spaces/stabilityai/stable-diffusion
+	https://beta.dreamstudio.ai/
 	LLM: Chat GPT
 	컨트롤넷
 	메타인지
