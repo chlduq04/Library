@@ -90,3 +90,10 @@ web os
  #서적
  	C 펀더멘탈
  	the cathedral and the bazaar
+	
+#AI
+	AI multi modal
+	PCA -> autoencoder -> deep autoencoder -> GAN -> stable diffusion
+	LLM: Chat GPT
+	컨트롤넷
+	메타인지
